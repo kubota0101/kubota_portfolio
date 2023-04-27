@@ -1,0 +1,421 @@
+body {
+    margin: 0 auto;
+    transition: all 1s;
+    font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+    color: #5f5f5f;
+}
+.conteiner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+section {
+    display: block;
+}
+img {
+    max-width: 100%;
+}
+h1, h2, h3 {
+    color: #818688;
+}
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}
+#menu {
+    position: fixed;
+}
+.service_list {
+    text-align: center;
+    background: #fff;
+    filter:drop-shadow(5px 5px 5px #4e4e4e);
+}
+.service_list p, .service_list ul {
+    text-align: left;
+}
+.service_list ul {
+    width: 50%;
+    margin: 16px auto;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+}
+@media screen and (min-width:1024px) {
+p {
+    line-height: 2;
+    font-size: 16px;
+}
+.menu-content ul {
+    width: 50%;
+    margin: 0 auto;
+}
+.center_area {
+    margin: 0 auto;
+    position: relative;
+    padding-top: 50px;
+    width: 1250px;
+}
+section {
+    padding: 120px 30px 0;
+}
+#top {
+    padding-top: 0;
+}
+.box_top_image {
+    height: 717px;
+}
+.title_sec h1 {
+    font-size: 60px;
+}
+h2 {
+    padding: 50px 0;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 70px;
+}
+.flex-box {
+    display: flex;
+}
+.top_image_area {
+    width: 84%;
+    margin-left: auto;
+}
+.about_area, .work_area {
+    align-items: center;
+    justify-content: center;
+}
+.about_area div, .work_area div {
+    width: 47%;
+    padding: 0 40px;
+}
+.about_area div:last-child, .work_area div:first-child {
+    padding-left: 0;
+}
+.about_area div:first-child, .work_area div:last-child {
+    padding-right: 0;
+}
+.about_image {
+    order:2;
+}
+.about_inner {
+    order: 1;
+}
+.service_area {
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+}
+.service_heading {
+    font-size: 28px;
+}
+.font-s {
+    font-size: 18px;
+    font-weight: 400;
+}
+.service_list {
+    width: 26%;
+    margin-right: 3%;
+    padding: 30px 30px 60px;
+
+}
+.service_list:last-child {
+    margin-right: 0;
+}
+#contact {
+    padding-bottom: 110px;
+}
+footer {
+padding: 40px 0;
+}
+}
+@media screen and (max-width:1024px) {
+    h2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+    }
+    p {
+    padding: 0 20px;
+    }
+    section {
+        margin-bottom: 60px;
+    }
+    section li, section a, p, .form_area {
+    font-size: 12px;
+    line-height: 2;
+    }
+    section h3 {
+    padding: 20px 20px 0;
+    font-size: 20px;
+    }
+    section a {
+        display: inline-block;
+        padding: 0 20px;
+    }
+    .title_sec {
+        left: 25px !important;
+    }
+    .box_top_image {
+        width: 80% !important;
+        right: -20% !important;
+        height: 100vh;
+    }
+    .service_list {
+        margin: 20px;
+        height: 400px;
+        padding: 5px;
+    }
+    .font-s {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .form_area {
+        padding: 0 20px 60px;
+    }
+}
+/*menu----------------------------------------*/
+  .menu-btn {
+    position: fixed;
+    top: 0px;
+    left: 16px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: #666;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 10px;
+}
+.menu-btn span:after {
+    top: 10px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+.menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+    background-color: #e8e3d7;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #5f5f5f;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 30px;
+    box-sizing: border-box;
+    color: #5f5f5f;
+    text-decoration: none;
+    padding: 20px 15px 20px 0;
+    position: relative;
+}
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}
+.center_area {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+.title_sec {
+    left: 1.5em;
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+.title_sec {
+    color: ;
+    letter-spacing: 0.1em;
+    line-height: 1.0em;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.title_sec .title_inner {
+    display: inline-block;
+    position: relative;
+}
+.title_sec .inview_title span {
+    display: inline-block;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -moz-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.box_top_image {
+    overflow: hidden;
+    position: relative;
+    right: -100px;
+    width: 100%;
+}
+.box_top_image img {
+    object-fit: cover;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.c-form {
+	max-width: 600px;
+	margin: 0 auto;
+}
+/*contact-form-------------------------*/
+.c-form__item {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+}
+.c-form__label,
+.c-form__input {
+	padding: 10px;
+}
+.c-form__label {
+	width: 90%;
+}
+.c-form__input {
+	width: 90%;
+	font-size: 16px;
+	border: solid 1px #333;
+	border-radius: 4px;
+}
+.c-form__input:focus-visible {
+	outline: #607D8B auto 1px;
+}
+.c-form__required {
+	color: #fff;
+	background-color: #607D8B;
+	border-radius: 4px;
+	padding: 5px 5px;
+	margin: 0 0 0 18px;
+}
+textarea.c-form__input {
+	height: 160px;
+}
+.c-form__submit {
+	text-align: center;
+}
+.c-form__submit button {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	background-color: #607D8B;
+	border: solid 1px #607D8B;
+	border-radius: 4px;
+	padding: 5px 32px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.c-form__submit button:hover {
+	color: #607D8B;
+	background-color: transparent;
+}
+
+@media (min-width: 640px) {
+	.c-form__item {
+		flex-wrap: nowrap;
+	}
+	.c-form__label {
+		width: 40%;
+	}
+	.c-form__input {
+		width: 55%;
+	}
+}
+/*アニメーション------------------*/
+#top {
+    display: none;
+}
+.element {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 1s, visibility 1s, transform 1s;
+  }
+.element-b {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(60px);
+    transition: opacity 3s, visibility 1s, transform 1s;
+  }
+.element-c {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(90px);
+    transition: opacity 5s, visibility 1s, transform 1s;
+  }
+  .is-fadein {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .is_active {
+    background-color: black;
+    transition: all 1.5s;
+  }
