@@ -55,6 +55,23 @@ footer {
     padding: 20px;
     background: #fff;
 }
+.todo-btn {
+    font-size: 18px;
+    color: #7e7e7e;
+    text-decoration: none;
+    display: inline-flex;
+    gap: 10px 10px;
+}
+.todo-btn span {
+    border-bottom: 1px solid;
+}
+.todo-btn:after {
+    display: block;
+    content: "→";
+    color: currentColor;
+    transition: transform 0.4s var(--transition-timing-function);
+    transform: translate(0, 0) rotate(-45deg);
+}
 @media screen and (min-width:1024px) {
 p {
     line-height: 2;
@@ -135,6 +152,9 @@ h2 {
 }
 .service_list:last-child {
     margin-right: 0;
+}
+.todo-btn {
+    font-size: 20px;
 }
 #contact {
     padding-bottom: 110px;
