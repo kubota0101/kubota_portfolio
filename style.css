@@ -137,7 +137,7 @@ h2 {
     justify-content: center;
     margin: 0 auto;
 }
-.service_heading {
+.service_heading, h3 {
     font-size: 28px;
 }
 .font-s {
